@@ -76,13 +76,4 @@ filenames= [joinedTable4, joinedTable3, joinedTable2, joinedTable1]
 combined_df = pd.concat(filenames, ignore_index=True)
 
 print(combined_df)
-"""
-#dropping all columns except these (note the ID col isnt named)
-cols_to_keep = [' ', 'zip', 'state', 'A00100']
-df[cols_to_keep].to_hdf(taxesallyears)
-df.columns = ['ID Number', 'Zip Code', 'State', 'Tax with AGI']   
-df['ID Number'] = np.arange(len(df))
-print(combined_df.id.duplicated().sum())
-combined_df.to_csv(taxesallyears)
-"""
 
